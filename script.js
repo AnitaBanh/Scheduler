@@ -1,45 +1,70 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-$(function () {
-  
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
-  
-  
-  var handleSaveBtn = function (event) {
-    event.preventDefault();
-    var userEntry = $('.col-8 col-md-10 description').val();
-$()
 
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-  var timeBlock =   $('.col-2 col-md-1 hour text-center py-3')
-  timeBlock.isBefore(daysjs()) {
-    addClass(past) 
-    css.background-color:grey}
-    timeBlock.isAfter(days()) {
-      timeBlock.removeClass('row time-block present');
-      imeBlock.removeClass('row time-block past')
-      timeBlock.addClass('row time-block future')
-    }
-  }
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
-  function currentTime (){
-    var timeFormat = dayjs().format('MMM DD, YYYY [at] hh:mm:ss a');
-      $('#currentDay').text(timeFormat);
-  }
-  currentTime ();
-  setInterval (currentTime, 1000);
-});
+// $(window).load(function() {
+
+// }
+
+// TODO: Add a listener for click events on the save button. This code should
+// use the id in the containing time-block as a key to save the user input in
+// local storage. HINT: What does `this` reference in the click listener
+// function? How can DOM traversal be used to get the "hour-x" id of the
+// time-block containing the button that was clicked? How might the id be
+// useful when saving the description in local storage?
+
+var handleSaveBtn = function (event) {
+  event.preventDefault();
+  var userEntry = $(".col-8").val();
+  $(".saveBtn").click(function () {$('#saveBtn').html();
+  localStorage.setItem('task',value);
+  $('#saveBtn').html(localStorage.content);
+  });
+};
+
+// TODO: Add code to apply the past, present, or future class to each time
+// block by comparing the id to the current hour. HINTS: How can the id
+// attribute of each time-block be used to conditionally add or remove the
+// past, present, and future classes? How can Day.js be used to get the
+// current hour in 24-hour time?
+
+// var timeBlock =   $('.col-2')
+// function colorScheme () {
+//   var elements = document.querySelector('.time-block');
+//   for (var i = 0; i< elements.length ; i++) {
+//   if timeBlock[i].isBefore(dayjs({})) {
+//   addClass('.past');
+//   timeBlock.removeClass('.future');
+//   timeBlock.removeClass('.present');
+//   css.background-color:grey
+// }
+// else if {
+//   timeBlock.isAfter(dayjs({})) {
+
+//     timeBlock.removeClass('.present');
+//     timeBlock.removeClass('.past');
+
+//   }
+// else {
+//   timeBlock.addClass('.present');
+// }}
+// }
+
+// TODO: Add code to get any user input that was saved in localStorage and set
+// the values of the corresponding textarea elements. HINT: How can the id
+// attribute of each time-block be used to do this?
+//
+
+// TODO: Add code to display the current date in the header of the page.
+var today = dayjs().format("MMM DD, YYYY");
+var addDate = $("#currentDay").text(today);
+function currentTime() {
+  var addDate = $("#currentDay").text(today);
+  addDate;
+  setInterval(function () {
+    addDate;
+  }, 1000);
+  console.log(today);
+}
+
+currentTime();
