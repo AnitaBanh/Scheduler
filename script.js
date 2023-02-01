@@ -12,7 +12,7 @@
 // function? How can DOM traversal be used to get the "hour-x" id of the
 // time-block containing the button that was clicked? How might the id be
 // useful when saving the description in local storage?
-
+let now = dayjs();
 var handleSaveBtn = function (event) {
   event.preventDefault();
   var userEntry = $(".col-8").val();
@@ -27,6 +27,12 @@ var handleSaveBtn = function (event) {
 // attribute of each time-block be used to conditionally add or remove the
 // past, present, and future classes? How can Day.js be used to get the
 // current hour in 24-hour time?
+
+function presentClass () {
+  if(now.format("HH") == (this.id)) {
+  $(".time-block").removeClass("future past").addClass("present");
+} return
+  };
 
 // var timeBlock =   $('.col-2')
 // function colorScheme () {
@@ -56,6 +62,8 @@ var handleSaveBtn = function (event) {
 //
 
 // TODO: Add code to display the current date in the header of the page.
+ $("#currentDay").text(now.format('MM/DD/YYYY'));
+
 var today = dayjs().format("MMM DD, YYYY");
 var addDate = $("#currentDay").text(today);
 function currentTime() {
