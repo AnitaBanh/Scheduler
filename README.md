@@ -2,6 +2,10 @@
   ![](https://img.shields.io/badge/license-MIT-green)
   ## Description
   This calendar application allows a user to save events for each hour of the day. Events are saved to and retrieved from local storage.
+  
+  https://anitabanh.github.io/Scheduler/
+  
+  ![image](https://user-images.githubusercontent.com/120350675/216233958-5cfa0d37-1882-42a6-8e7b-e44e3dd5df66.png)
 
   ## Table of Contents 
 
