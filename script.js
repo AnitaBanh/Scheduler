@@ -62,17 +62,13 @@ function presentClass () {
 //
 
 // TODO: Add code to display the current date in the header of the page.
- $("#currentDay").text(now.format('MM/DD/YYYY'));
 
-var today = dayjs().format("MMM DD, YYYY");
-var addDate = $("#currentDay").text(today);
+
 function currentTime() {
-  var addDate = $("#currentDay").text(today);
-  addDate;
+  var addDate = $("#currentDay").text(now.format('MMM DD, YYYY'));
   setInterval(function () {
-    addDate;
+    addDate
   }, 1000);
-  console.log(today);
 }
 
 currentTime();
